@@ -10,6 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var lblText: UILabel!
+    @IBAction func slidingAction(_ sender: UISlider) {
+        
+        lblText.text = "Slider value \(sender.value)"
+        
+    }
+    
+    
+    @IBAction func OnOffAction(_ sender: UISwitch) {
+        lblText.text = "Swicth Value \(sender.isOn)"
+    }
+    
+    @IBAction func stepPerformAction(_ sender: UIStepper) {
+        
+        lblText.text = "Stepper Value \(sender.value)"
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
